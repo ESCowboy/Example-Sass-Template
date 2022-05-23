@@ -1,0 +1,88 @@
+.section-about {
+    overflow: hidden;
+
+    &--description {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 3;
+    }
+
+    &__background {
+        background-image: url('../../assets/img/title-bg.jpg');
+        animation: 30s background cubic-bezier(0.445, 0.05, 0.55, 0.95);
+        animation-iteration-count: infinite;
+        filter: blur(4rem) brightness(.5);
+    }
+
+    .particles {
+        width: 100%;
+        height: 100%;
+
+        .particle {
+            z-index: 3;
+            width: 15rem;
+            height: 15rem;
+            position: absolute;
+            background-image: url('../../assets/img/diamond.png');
+            top: 0;
+            left: 0;
+            background-size: contain;
+            z-index: 1;
+
+            &:nth-child(1) {
+                left: 30%;
+                width: 11rem;
+                height: 11rem;
+                z-index: 1;
+                filter: blur(.5rem);
+                animation: 12s diamond-drop-1 linear;
+                animation-iteration-count: infinite;
+            }
+
+            &:nth-child(2) {
+                left: 55%;
+                top: -40%;
+                filter: blur(.1rem);
+                animation: 6s diamond-drop-2 linear;
+                animation-iteration-count: infinite;
+                animation-delay: 2s;
+                z-index: 2;
+            }
+
+            &:nth-child(3) {
+                left: 60%;
+                filter: blur(.2rem);
+                animation: 8s diamond-drop-3 linear;
+                animation-iteration-count: infinite;
+                width: 12rem;
+                height: 12rem;
+            }
+
+            &:nth-child(4) {
+                left: 20%;
+                top: -30%;
+                filter: blur(.2rem);
+                animation: 8s diamond-drop-4 linear;
+                animation-iteration-count: infinite;
+                animation-delay: 3s;
+
+                width: 12rem;
+                height: 12rem;
+            }
+
+            &:nth-child(5) {
+                left: 10%;
+                filter: blur(.5rem);
+                animation: 18s diamond-drop-5 linear;
+                animation-iteration-count: infinite;
+                width: 9rem;
+                height: 9rem;
+            }
+
+        }
+    }
+}

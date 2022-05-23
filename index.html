@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling Example</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+        </label>
+        <nav class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="#" class="navigation__link">Welcome</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link">About</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <header class="section section-header">
+            <div class="loading">
+                <div class="clip-top"></div>
+                <div class="clip-bottom"></div>
+            </div>
+
+            <div class="section__background section-header__background"></div>
+
+            <figure class="section-header__logo">
+                <img src="./assets/img/logo.png" alt="">
+                <figcaption>Proper styling</figcaption>
+            </figure>
+
+            <h1 class="title heading-primary">
+                <span class="heading-primary--main">Let's check </span>
+                <span class="heading-primary--main">what we can do </span>
+                <span class="heading-primary--main">in one day</span>
+            </h1>
+        </header>
+
+        <section class="section section-about">
+            <div class="section__background section-about__background"></div>
+
+            <h1 class="section-about--description heading-primary">
+                <span class="heading-primary--sub"> adipisicing elit. Natus obcaecati optio</span>
+                <span class="heading-primary--sub">fugiat neque deleniti voluptas illum quam</span>
+                <span class="heading-primary--sub">mollitia incidunt voluptatum, asperiores numquam</span>
+                <span class="heading-primary--sub">ipsam ipsum totam, repudiandae omnis odio. Eius, nulla</span>
+            </h1>
+
+            <div class="particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+        </section>
+
+        <section class="section section-contact">
+            <div class="section__background section-contact__background"></div>
+            <form class="section-contact__form">
+                <div class="section-contact__input">
+                    <input type="text" placeholder="Name" name="firstname">
+                </div>
+                <div class="section-contact__input">
+                    <input type="text" placeholder="Surname" name="secondname">
+                </div>
+                <div class="section-contact__input">
+                    <input type="email" placeholder="name@labdigital.nl" name="email">
+                </div>
+
+                <button type="submit" class="section-contact__submit">
+                    <span>Contact</span>
+                    <div class="liquid"></div>
+                </button>
+            </form>
+        </section>
+    </main>
+
+</body>
+<script src="./js/code.js"></script>
+
+</html>

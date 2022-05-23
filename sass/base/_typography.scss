@@ -1,0 +1,33 @@
+body, form, button, input {
+    font-family: 'Rubik Glitch', cursive;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+.heading-primary {
+    color: $color-white;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+
+    &--main {
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+
+        @include respond(tab-port) {
+            font-size: 5rem;
+        }
+        @include respond(tab-land) {
+            font-size: 4rem;
+        }
+        @include respond(phone-mini) {
+            font-size: 3.5rem;
+        }
+    }
+    
+    &--sub {
+        display: block;
+        font-size: 3rem;
+        font-weight: 200;
+    }
+}

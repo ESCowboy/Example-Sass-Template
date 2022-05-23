@@ -1,0 +1,117 @@
+.section-contact {
+  perspective: 150rem;
+
+  &__background {
+    background-image: url('../../assets/img/title-bg.jpg');
+    animation: 30s background cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    animation-iteration-count: infinite;
+    filter: blur(4rem) brightness(.5);
+  }
+
+  &__form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__input {
+    position: relative;
+    width: 30rem;
+    height: 4rem;
+    margin-bottom: 2rem;
+    border-radius: .5rem;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 30rem;
+
+      animation: rotate-360 linear 8s infinite;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-image: url('../../assets/img/title-bg.jpg');
+      background-position: 90% 80%;
+    }
+
+    input {
+      border-radius: .5rem;
+      border: none;
+      position: absolute;
+      left: .375rem;
+      top: .375rem;
+      width: calc(100% - .75rem);
+      height: calc(100% - .75rem);
+      padding: 1rem;
+      outline: none;
+      color: $color-white;
+      background-color: $color-background;
+      font-size: $default-font-size;
+    }
+  }
+
+  &__submit {
+    position: relative;
+    width: 30rem;
+    display: block;
+    overflow: hidden;
+    border-radius: 2rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    line-height: 4rem;
+    text-align: center;
+    outline: none;
+    border: none;
+    background: none;
+    margin: auto;
+
+    span {
+      position: relative;
+      color: $color-white;
+      letter-spacing: 8px;
+      z-index: 1;
+    }
+
+    .liquid {
+      position: absolute;
+      width: 30rem;
+      height: 30rem;
+      top: -12rem;
+      left: 0;
+      background-image: url('../../assets/img/title-bg.jpg');
+      background-position: 90% 80%;
+      box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
+      transition: .5s;
+
+      &::after,
+      &::before {
+        content: '';
+        position: absolute;
+        width: 200%;
+        height: 200%;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -75%);
+      }
+
+      &::before {
+        border-radius: 45%;
+        background: rgba($color-black, 0.5);
+        animation: liquid-btn 5s linear infinite;
+      }
+
+      &::after {
+        border-radius: 40%;
+        background: rgba($color-black, 0.2);
+        animation: liquid-btn 10s linear infinite;
+      }
+    }
+
+    &:hover .liquid {
+      top: -17rem;
+    }
+  }
+}

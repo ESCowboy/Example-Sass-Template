@@ -1,0 +1,117 @@
+.navigation {
+    position: fixed;
+    top: 6rem;
+    right: 7rem;
+    z-index: 99;
+
+    @include respond(phone) {
+        top: 0rem;
+        right: 3rem;
+    }
+
+    &__checkbox {
+        display: none;
+    }
+ 
+    &__button {
+        height: 7rem;
+        width: 7rem;
+
+        border-radius: 50%;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    &__icon {
+        position: relative;
+        margin-top: 3.5rem;
+
+        &,
+        &::before,
+        &::after {
+            width: 3rem;
+            height: 4px;
+            background-color: $color-white;
+            display: inline-block;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: all .2s;
+        }
+
+        &::before {
+            top: -.8rem;
+        }
+
+        &::after {
+            top: .8rem;
+        }
+    }
+
+    &__button:hover &__icon::before {
+        top: -1rem;
+    }
+
+    &__button:hover &__icon::after {
+        top: 1rem;
+    }
+
+    &__checkbox:checked+&__button &__icon {
+        background-color: transparent;
+    }
+
+    &__checkbox:checked+&__button &__icon::before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    &__checkbox:checked+&__button &__icon::after {
+        top: 0;
+        transform: rotate(-135deg);
+    }
+
+    &__nav{
+        padding: 0 2rem 0 2rem;
+        position: absolute;
+        top: 10rem;
+        right: 0;
+        text-align: right;
+        line-height: 6rem;
+        overflow-x: hidden;
+    }
+
+    &__list{
+        list-style: none;
+    }
+
+    &__item{
+        transform: translateX(10rem);
+        transition: 1s;
+
+        &:nth-child(2){
+            transition-delay: .25s;
+        }
+
+        &:nth-child(3){
+            transition-delay: .5s;
+        }
+    }
+
+    &__link:hover{
+        text-shadow: 0 0 2rem white;
+    }
+
+    &__link {
+        text-decoration: none;
+        font-size: $default-font-size;
+        color: white;
+    }
+
+    &__checkbox:checked ~ &__nav &__item {
+        transform: translateX(0);
+    }
+}
